@@ -1,0 +1,922 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e8e8e8;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b1c1c;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el menú esté por encima del resto del contenido */
+}
+
+.menu li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%; 
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    background-color: #ef8354;
+    color: #ffffff;
+}
+.color-pagina{
+    background: linear-gradient(to bottom, #ff7a41 ,#ff7a41,#9d3c00); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    color: transparent;  
+}
+
+
+
+.main {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    color:#aaa;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------             HOME            ---------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+.apuesta-y-gana{
+    display: flex;
+    background-color: #0d0d0d;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    height: 500px; 
+    width: 100%; 
+}
+.apuesta-y-gana #elemento1{
+    font-size: 3em;
+}
+.apuesta-y-gana #elemento2 {
+    align-items: center; 
+
+}
+
+.apuesta-y-gana #elemento2 img {
+    max-width: 90%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+.inicio-de-pagina {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    color: white;
+}
+#home {
+    width: 100%;
+    height: 100vh; 
+    background-image: url('imagenes/futbol.avif'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.inicio-de-pagina h1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 6em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%; 
+    
+}
+.inicio-de-pagina h2 {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding-left: 20px; 
+    
+}
+.sobre-nosotros {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #1b1c1c;
+    color: white;
+    padding: 40px 20px;
+}
+
+.info-sobre-nosotros {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.info-sobre-nosotros .titulo-info {
+    color: #00ff6b;
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.info-sobre-nosotros h3 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.imagen-de-nosotros {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-de-nosotros img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.descripcion-de-nosotros {
+    flex: 2;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.descripcion-de-nosotros .titulo-seguir {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #00ff6b;
+    margin-bottom: 10px;
+}
+
+.links-rs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.links-rs a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.links-rs a:hover {
+    color: #ef8354;
+}
+.promo {
+    display: flex;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.promo-izq {
+    flex: 1;
+    text-align: center;
+}
+
+.promo-izq h1, .promo-izq h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.promo-der {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.promo-der h1 {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.promo-der p {
+    font-size: 1.3em;
+    margin: 20px 0;
+    color: #b3b3b3;
+}
+
+.promo-der button {
+    background-color: #00cc66;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.promo-der button:hover {
+    background-color: #00994d;
+}
+
+.promo-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.promo-logo img {
+    width: 250px; 
+    height: auto;
+    background-color: transparent;
+}
+
+.reseñas {
+    width: 100%;
+    padding: 40px;
+    background-color: #0f0f0f;
+  }
+  
+  .reseñas-header {
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .reseñas-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #55ff55;
+  }
+  
+  .reseñas-calificación {
+    text-align: left;
+    color: #fff;
+  }
+  
+  .calificación-puntaje {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .calificación-texto {
+    font-size: 16px;
+    color: #aaa;
+  }
+  
+  .calificación-estrellas {
+    color: #55ff55;
+    font-size: 18px;
+  }
+  
+  .reseñas-lista {
+    list-style: none;
+    padding-top: 10px;
+  }
+  
+  .reseñas-lista li {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .reseñas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .reseña-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    width: calc(50% - 10px);
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .reseña-estrellas {
+    color: #55ff55;
+    font-size: 18px;
+  }
+  
+  .reseña-texto {
+    font-size: 16px;
+    color: #ddd;
+    font-style: italic;
+    margin: 15px 0;
+  }
+  
+  .reseña-usuario {
+    display: flex;
+    align-items: center;
+  }
+  
+  .usuario-imagen {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .usuario-nombre {
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  #footer-main {
+    background-color: #0f0f0f;
+    color:#fff;
+    height: 80vh; 
+    background-image: url('imagenes/fondo_footer.avif'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+  #footer-main h2 {
+    background: linear-gradient(to bottom, #ff7a41 ,#ff7a41,#9d3c00); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    color: transparent; /* Asegura que el texto tome el color del degradado */
+    font-size: 4em;
+  }
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------             BET             ---------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+#seccion-informacion {
+    
+    color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#informacion-texto {
+    flex: 1;
+    margin-right: 20px;
+    font-size: 1.3em;
+}
+#informacion-texto ul {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    padding: 0;
+    margin: 0;
+}
+
+#subtitulo-como-apostar {
+    font-size: 2.8em;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+#texto-como-apostar {
+    font-size: 0.9em;
+    
+}
+
+#informacion-imagen {
+    flex: 1;
+    text-align: right;
+}
+
+#imagen-como-apostar {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#opciones-apuestas { 
+    text-align: center;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+#subtitulo-opciones {
+    font-size: 1.5em;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+#grid-opciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.opcion {
+    background-color: var(--color-secundario);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.titulo-opcion {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+}
+
+.descripcion-opcion {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.boton-apostar {
+    background-color: var(--color-boton);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.boton-apostar:hover {
+    background-color: var(--color-boton-hover);
+}
+
+
+#footer-bet {
+    background-image: url('imagenes/fondo_footer_bet.jpg');
+    text-align: center;
+    padding: 10px;
+    height: 50vh;
+    width: auto;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#texto-footer {
+    margin: 0;
+    font-size: 0.9em;
+}
+.boton-apostar:hover,
+.boton-apostar:focus {
+    background-color: #ef8354; 
+    color: #ffffff;
+}
+#apuestas{
+    width: 100%; 
+    height: 70vh; 
+    background-image: url('imagenes/fono-apuestas.webp'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    margin-bottom: 100px;
+    font-size: 2.5em;
+    
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------             TIENDA             ---------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+.ofertas {
+    width: 100%;
+    padding: 40px;
+    background-color: #0f0f0f;
+}
+
+.ofertas-header {
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.ofertas-titulo {
+    font-size: 50px;
+    font-weight: bold;
+    color: #55ff55;
+}
+
+.ofertas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.oferta-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    width: calc(50% - 10px);
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-align: center;
+    color: #ddd;
+}
+
+.monedas-cantidad {
+    font-size: 30px;
+    color: #55ff55;
+}
+
+.precio {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.boton-comprar {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ef8354;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-comprar:hover {
+    background-color: #55ff55;
+}
+
+.promocion-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    width: calc(50% - 10px);
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promocion-imagen {
+    width: 600px;
+    margin-bottom: 15px; 
+}
+#tienda{
+    width: 100%;
+    height: 70vh; 
+    background-image: url('imagenes/fondo_tienda.avif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    margin-bottom: 100px;
+    font-size: 2.5em;
+    
+}
+
+#footer-tienda {
+    background-image: url('imagenes/footer-tienda.avif');
+    text-align:center;
+    padding: 10px;
+    height: 50vh;
+    width: auto;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------             CUENTA            ---------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+.perfil-contenedor {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #666;
+}
+
+.perfil-detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nombre-usuario {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ddd;
+}
+
+.monedas {
+    font-size: 1.2em;
+    color: #ffd700;
+    margin-top: 5px;
+}
+
+.btn-retiro {
+    padding: 10px 20px;
+    font-size: 1.2em;    
+    color: #0e0d0d;
+    background-color: #55ff55;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 500px;
+}
+
+.btn-retiro:hover {
+    background-color: #1d8a1d;
+    color: #aaa;
+}
+
+.historial-apuestas {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    color: #ddd;
+}
+
+.historial-apuestas h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.apuesta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
+}
+
+.apuesta:last-child {
+    border-bottom: none;
+}
+
+.fecha, .competencia {
+    font-size: 1em;
+    margin-right: 20px;
+}
+
+.monto {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.ganado {
+    color: #28a745; 
+}
+
+.perdido {
+    color: #dc3545;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------             MEDIA QUERY            ---------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+    }
+  
+    .menu li {
+      flex-grow: 0;
+      width: 100%; 
+    }
+  
+    .main {
+      padding-top: 140px; 
+    
+    }
+
+    .apuesta-y-gana {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .apuesta-y-gana #elemento2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sobre-nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagen-de-nosotros img {
+        width: 100%;
+        height: auto;
+    }
+
+    .descripcion-de-nosotros {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .promo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .promo-left, .promo-right, .promo-logo {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .reseñas-contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reseña-card {
+        width: 100%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+  
+    .ofertas-contenedor {
+      flex-direction: column; 
+    }
+  
+    .oferta-card {
+      width: 100%; 
+      box-sizing: border-box; 
+    }
+  
+    .promocion-imagen {
+      width: 100%; 
+      height: auto; 
+    }
+    #footer-main {
+        text-align: center;
+        padding: 20px 0; 
+    }
+
+    #footer-main h2 {
+        font-size: 1.5rem; 
+    }
+
+    #seccion-informacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #informacion-texto {
+        margin-bottom: 20px;
+    }
+
+    #informacion-imagen {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #imagen-como-apostar {
+        width: 100%;
+        height: auto;
+    }
+
+    #grid-opciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .opcion {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    .boton-apostar {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 10px;
+    }
+    .perfil-contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .foto-perfil {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .perfil-detalles {
+        text-align: center;
+    }
+
+    .btn-retiro {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 10px;
+    }
+
+    .historial-apuestas {
+        padding: 10px;
+    }
+
+    .apuesta {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
